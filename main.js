@@ -10,7 +10,7 @@ window.onload = function () {
 };
 
 function clearErrors() {
-  document.querySelectorAll(".error").forEach(function (elements) {
+  document.querySelectorAll("#error").forEach(function (elements) {
     elements.remove();
   });
 
@@ -53,7 +53,7 @@ function showError(input, message) {
 
   // create the error and its message
   let span = document.createElement("span");
-  span.className = "error";
+  span.id = "error";
   span.style = styleError;
   span.textContent = message;
   input.parentNode.append(span);
@@ -63,7 +63,6 @@ function showError(input, message) {
   errorSign.id = "error-sign";
   errorSign.innerHTML = `<i class="fa-solid fa-circle-exclamation" style="color: hsl(0, 100%, 74%);"></i>`;
   input.parentNode.append(errorSign);
-
 }
 
 document.forms[0].onsubmit = function (event) {
