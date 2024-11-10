@@ -182,7 +182,7 @@ form p a {
 }
 
 @media (hover: none) {
-    [type='submit']:hover {
+    input[type='submit']:hover {
         background-color: inherit;
         color: inherit;
         pointer-events: none;
